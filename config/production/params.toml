@@ -1,0 +1,3 @@
+MyDefLastUrlEle = "/hugo_docs_with_hugo"
+# Enable Algolia DocSearch
+algolia_docsearch = true
