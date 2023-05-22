@@ -1,7 +1,7 @@
 +++
 title = "Hugo and GDPR"
 weight = 2
-date = 2023-05-22T13:22:08+08:00
+date = 2023-05-22T13:22:08+08:08
 description = ""
 isCJKLanguage = true
 draft = false
