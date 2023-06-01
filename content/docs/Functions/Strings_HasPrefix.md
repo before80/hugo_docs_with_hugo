@@ -1,5 +1,5 @@
 +++
-title = "Strings_HasPrefix"
+title = "strings.HasPrefix"
 weight = 117
 date = 2023-05-18T17:03:08+08:00
 description = ""

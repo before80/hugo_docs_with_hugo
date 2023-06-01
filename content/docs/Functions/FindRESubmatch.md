@@ -1,5 +1,5 @@
 +++
-title = "FindRESubmatch"
+title = "findRESubmatch"
 weight = 37
 date = 2023-05-18T17:03:08+08:00
 description = ""
@@ -8,7 +8,7 @@ draft = false
 +++
 
 将以下英文翻译为中文：
-# ndRESubmatch
+# findRESubmatch
 
 [https://gohugo.io/functions/findresubmatch/](https://gohugo.io/functions/findresubmatch/)
 

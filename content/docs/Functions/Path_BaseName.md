@@ -1,5 +1,5 @@
 +++
-title = "Path_BaseName"
+title = "path.BaseName"
 weight = 75
 date = 2023-05-18T17:03:08+08:00
 description = ""

@@ -1,5 +1,5 @@
 +++
-title = "SafeHTMLAttr"
+title = "safeHTMLAttr"
 weight = 100
 date = 2023-05-18T17:03:08+08:00
 description = ""

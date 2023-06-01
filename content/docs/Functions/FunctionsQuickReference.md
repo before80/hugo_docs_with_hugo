@@ -1,6 +1,6 @@
 +++
-title = "FunctionsQuickReference"
-weight = 40
+title = "函数快速参考"
+weight = -1
 date = 2023-05-18T17:03:08+08:00
 description = ""
 isCJKLanguage = true
