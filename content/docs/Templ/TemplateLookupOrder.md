@@ -59,6 +59,125 @@ draft = false
 
 ​	在Hugo中，布局可以存在于项目或主题的布局文件夹中，并且会选择最具体的布局。Hugo将交错查找下面的布局，找到最具体的一个布局，无论是在项目还是主题中。
 
+## 指定一个模板
+
+你不能改变查找内容页面的顺序，但是你可以改为让一个内容页面去指定一个模板。在前置类型元数据中指定类型、布局或者两者。
+
+考虑这个内容结构：
+
+```bash
+content/
+├── about.md
+└── contact.md
+```
+
+在内容目录的根中文件有一个`page`的[内容类型](https://gohugo.io/getting-started/glossary/#content-type)。创建一个匹配的子目录，可以用单独一个模型去渲染这些页面：
+
+```bash
+layouts/
+└── page/
+    └── single.html
+```
+
+但是`contact`页面可能有一个表格和要求一个不同的模板。在前置类型元数据指定布局：
+
+content/contact.md.
+ 
+=== "yaml"
+
+    ``` yaml
+    layout: contact
+    title: Contact
+    ```
+
+=== "toml"
+
+    ``` toml
+    layout = 'contact'
+    title = 'Contact'
+    ```
+
+=== "json"
+
+    ``` json
+    {
+       "googleAnalytics": "G-MEASUREMENT_ID"
+    }
+    ```
+
+然后为`contact`页面创建模板：
+
+```bash
+layouts/
+└── page/
+    └── contact.html  <-- renders contact.md
+    └── single.html   <-- renders about.md
+```
+
+作为一个内容类型，单词`page`是不准确的。可能`miscellaneous`将是更好的。添加`type`到每个页面的前置类型元数据：
+
+content/about.md.
+   
+=== "yaml"
+
+    ``` yaml
+    title: About
+    type: miscellaneous
+    ```
+
+=== "toml"
+
+    ``` toml
+    title = 'About'
+    type = 'miscellaneous'
+    ```
+
+=== "json"
+
+    ```json
+    {
+      "title": "About",
+      "type": "miscellaneous"
+    }
+    ```
+
+content/contact.md.
+   
+=== "yaml"
+
+    ``` yaml
+    layout: contact
+    title: Contact
+    type: miscellaneous
+    ```
+
+=== "toml"
+
+    ``` toml
+    layout = 'contact'
+    title = 'Contact'
+    type = 'miscellaneous'
+    ```
+
+=== "json"
+
+    ```json
+    {
+      "layout": "contact",
+      "title": "Contact",
+      "type": "miscellaneous"
+    }
+    ```
+
+现在放置布局进入相应的目录：
+
+```bash
+layouts/
+└── miscellaneous/
+    └── contact.html  <-- renders contact.md
+    └── single.html   <-- renders about.md
+```
+
 ## 示例：常规页面的布局查找
 
 | Example                                                      | OutputFormat | Suffix | Template Lookup Order                                        |
